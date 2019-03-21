@@ -5,55 +5,32 @@ using namespace std;
 
 int main()
 	{
-
-
 	List2* lst = new List2;
 		if(lst->IsEmpty())
 			cout << "List is Empty" << endl;
 		
-		lst->PutItemH(4);
-		lst->PutItemH(5);
-		lst->PutItemH(6);
-		lst->PutItemH(7);
-		lst->PutItemH(8);
-		lst->PutItemH(9);
+		
+		lst->PutItemT(7);
+		lst->PutItemT(8);
+		lst->PutItemT(9);
+		lst->PutItemT(10);
 		if(lst->IsEmpty())
 			cout << "List is still empty" << endl;
 		else
 			cout << "Not Empty List" << endl;
-
+	cout << endl;
 	int length = lst->GetLength();
 	cout << "Length: " << length << endl;
-	//lst->DeleteItemH();
+	lst->DeleteItemH();
 	lst->Print();
 	
-	int item = 5;
+	int item = 8;
 	int pos = 0;
 	int tester = 767;
-	lst->Find(item, pos);
-	cout << "Position: " << pos << endl;
+	lst-> Find (item, pos);	
+	cout << item << " is in position: " << pos << endl;
 	cout << "First item: " << lst->GetItemH() << endl;
 	lst->PutItemT(tester);
 	lst->Print();
-
-
-	//cout << "Tail test " << lst->GetItemT();
-
-
-
-
-
 	return 0;
 }
-
-
-/*	void List2::PutItemT(const itemType newItem)
-		{
-			node*cur = new node;
-			cur->item = newItem;
-			cur->next = nullptr;
-			tail->next = cur;
-			tail = cur;
-			length++;
-		}
-*/

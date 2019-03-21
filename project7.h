@@ -74,7 +74,6 @@ class List2
    */
    void PutItemT(itemType newItem);
 	
-		void PutItemH(itemType newItem);	//Tanner added
    /*
    pre: an instance of the list exists and is not empty
    post: Returns the contents of the tail of the list.
